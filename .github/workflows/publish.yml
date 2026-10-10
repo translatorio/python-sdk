@@ -1,0 +1,59 @@
+name: Publish
+
+# A tag, for the same reason as everywhere else: it is the version and the commit agreeing.
+on:
+  push:
+    tags: ['[0-9]*.[0-9]*.[0-9]*']
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+
+    # The environment is not decoration: PyPI's trusted publishing can be restricted to
+    # one, so a workflow on another branch cannot use the same trust.
+    environment: pypi
+
+    permissions:
+      contents: read
+      # This is the whole point. PyPI accepts an OIDC token from this workflow instead of
+      # an API token, so there is no long-lived secret to leak, rotate or paste anywhere.
+      # It has to be configured once on PyPI as a publisher for this project; a "pending
+      # publisher" can be set up BEFORE the first release, so even that one needs no token.
+      id-token: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+
+      # The release tag IS the version. It is written into pyproject.toml and into the
+      # constant the User-Agent reads, here and only for this publish, so cutting a release
+      # is creating the tag and nothing else: no file to bump by hand, and no way for the
+      # tag and the manifest to disagree.
+      - name: Take the version from the tag
+        run: |
+          VERSION="$GITHUB_REF_NAME"
+          if ! echo "$VERSION" | grep -Eq '^[0-9]+\.[0-9]+\.[0-9]+$'; then
+            echo "Tag $VERSION is not a version like 1.2.3."
+            exit 1
+          fi
+          sed -i "s/^version = \".*\"/version = \"$VERSION\"/" pyproject.toml
+          sed -i "s/^VERSION = \".*\"/VERSION = \"$VERSION\"/" translatorio/client.py
+          grep -q "^version = \"$VERSION\"" pyproject.toml
+          grep -q "^VERSION = \"$VERSION\"" translatorio/client.py
+
+      - run: pip install build twine
+
+      # Nothing is published that does not pass. A version on PyPI cannot be replaced or
+      # reused, so a broken release is always a new number.
+      - run: python -m unittest discover -s tests -v
+
+      - run: python -m build
+
+      # What catches a README that PyPI will not render, which is the commonest way a
+      # first release looks broken on the one page everybody reads.
+      - run: twine check dist/*
+
+      - uses: pypa/gh-action-pypi-publish@release/v1

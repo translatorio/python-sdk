@@ -1,0 +1,11 @@
+__pycache__/
+*.py[cod]
+/build
+/dist
+*.egg-info/
+/.venv
+/.ruff_cache
+/.mypy_cache
+
+# Notes for whoever works on the client, not part of the package.
+/CLAUDE.md
