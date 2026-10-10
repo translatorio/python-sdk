@@ -337,7 +337,9 @@ class Client:
                 language or ``{"es": {"cart": "cesta"}}`` per language.
             anonymize: mask personal data before the model sees it. The API's default is on.
             reference: your own id for the call, handed back and kept in the history.
-            effort: ``low``, ``medium`` or ``high``: how hard the model works.
+            effort: ``default``, ``low``, ``medium`` or ``high``: how hard the model
+                works. ``default`` (also when omitted) is the level Translatorio
+                recommends at the time.
             idempotency_key: your own key, to make a retry from your side the same call.
         """
         body = {"texts": list(text)} if isinstance(text, list) else {"text": text}

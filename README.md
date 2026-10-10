@@ -71,8 +71,8 @@ API refuses unknown fields with `unknown_field`, and an option left out is never
 
 ### Choosing how hard the model works
 
-`effort` (`low`, `medium` or `high`) is accepted on `translate()`, `translate_file()`,
-`translate_image()` and `batch()`, and sent only when you pass it:
+`effort` (`default`, `low`, `medium` or `high`) is accepted on `translate()`, `translate_file()`,
+`translate_image()` and `batch()`, and sent only when you pass it. Leaving it out is the same as `default`: the level Translatorio recommends at the time (medium today), which moves as the models do. Name a level to keep it fixed.
 
 ```python
 tr.translate(text, "es", effort="high")
