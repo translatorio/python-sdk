@@ -2,7 +2,7 @@
 
 # Translatorio Python SDK
 
-[![PyPI version](https://img.shields.io/pypi/v/translatorio-sdk.svg)](https://pypi.org/project/translatorio-sdk/) [![PyPI downloads](https://img.shields.io/pypi/dm/translatorio-sdk.svg)](https://pypi.org/project/translatorio-sdk/) [![license](https://img.shields.io/pypi/l/translatorio-sdk.svg)](https://github.com/translatorio/python-sdk/blob/main/LICENSE) [![Python versions](https://img.shields.io/pypi/pyversions/translatorio-sdk.svg)](https://pypi.org/project/translatorio-sdk/)
+[![tests](https://github.com/translatorio/python-sdk/actions/workflows/tests.yml/badge.svg)](https://github.com/translatorio/python-sdk/actions/workflows/tests.yml) [![PyPI version](https://img.shields.io/pypi/v/translatorio-sdk.svg)](https://pypi.org/project/translatorio-sdk/) [![PyPI downloads](https://img.shields.io/pypi/dm/translatorio-sdk.svg)](https://pypi.org/project/translatorio-sdk/) [![license](https://img.shields.io/pypi/l/translatorio-sdk.svg)](https://github.com/translatorio/python-sdk/blob/main/LICENSE) [![Python versions](https://img.shields.io/pypi/pyversions/translatorio-sdk.svg)](https://pypi.org/project/translatorio-sdk/)
 
 The official Python client for [Translatorio](https://translatorio.com), the translation API.
 
