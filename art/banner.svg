@@ -1,0 +1,38 @@
+<!-- git-art 0.1.0 -->
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="320" viewBox="0 0 1280 320" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1280" y2="320" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0d0d0d"/>
+      <stop offset="1" stop-color="#1d1d1b"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
+      gradientTransform="translate(1040 160) scale(420)">
+      <stop offset="0" stop-color="#d1ff8f" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#d1ff8f" stop-opacity="0"/>
+    </radialGradient><radialGradient id="fog" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
+      gradientTransform="translate(160 320) scale(520 220)">
+      <stop offset="0" stop-color="#009e4d" stop-opacity="0.38"/>
+      <stop offset="1" stop-color="#009e4d" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#d1ff8f" stroke-opacity="0.04" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <rect width="1280" height="320" rx="20" fill="url(#bg)"/>
+  <rect width="1280" height="320" rx="20" fill="url(#grid)"/>
+  <rect width="1280" height="320" rx="20" fill="url(#fog)"/>
+  <!-- Drawn before the glow, so the light falls over the mark rather than under it. -->
+  <image href="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIC04IDI0MCAyNDgiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiAgPHBhdGggZD0iTTEwOCAxOTAgQzEwMCAyMTAgOTYgMjI0IDk4IDIzOCBDMTEwIDIzMCAxMTggMjE0IDEyMCAxOTYgWiIgZmlsbD0iIzBhNWU1OCIvPgogIDxwYXRoIGQ9Ik0xMzIgMTkwIEMxNDAgMjEwIDE0NCAyMjQgMTQyIDIzOCBDMTMwIDIzMCAxMjIgMjE0IDEyMCAxOTYgWiIgZmlsbD0iIzU2YjJmZiIvPgogIDxwYXRoIGQ9Ik0xMTQgMTkyIEMxMTQgMjEyIDExNiAyMjYgMTIwIDIzOCBDMTI0IDIyNiAxMjYgMjEyIDEyNiAxOTIgWiIgZmlsbD0iIzAwOWU0ZCIvPgogIDxwYXRoIGQ9Ik03NCAxMjIgQzUwIDEzMiA0NCAxNzAgNjIgMTk2IEM3NCAxOTIgODQgMTc0IDg2IDE1MCBaIiBmaWxsPSIjMGE1ZTU4Ii8+CiAgPHBhdGggZD0iTTE2NiAxMjIgQzE5MCAxMzIgMTk2IDE3MCAxNzggMTk2IEMxNjYgMTkyIDE1NiAxNzQgMTU0IDE1MCBaIiBmaWxsPSIjMGE1ZTU4Ii8+CiAgPHBhdGggZD0iTTU4IDE3MCBxNiA2IDEyIDIgTTYyIDE4NCBxNSA1IDEwIDEgTTE4MiAxNzAgcS02IDYgLTEyIDIgTTE3OCAxODQgcS01IDUgLTEwIDEiIHN0cm9rZT0iIzEzODk3ZiIgc3Ryb2tlLXdpZHRoPSIzLjUiIGZpbGw9Im5vbmUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgogIDxwYXRoIGQ9Ik02OCAxNTAgQzY4IDExOCA5MCAxMDQgMTIwIDEwNCBDMTUwIDEwNCAxNzIgMTE4IDE3MiAxNTAgQzE3MiAxODQgMTUwIDIwNCAxMjAgMjA0IEM5MCAyMDQgNjggMTg0IDY4IDE1MCBaIiBmaWxsPSIjMDBiODVhIi8+CiAgPGVsbGlwc2UgY3g9IjEyMCIgY3k9IjE2MiIgcng9IjMzIiByeT0iMzYiIGZpbGw9IiNkMWZmOGYiLz4KICA8cGF0aCBkPSJNMTAwIDE1MCBxNSA1IDEwIDAgcTUgNSAxMCAwIHE1IDUgMTAgMCBxNSA1IDEwIDAgTTEwNSAxNjYgcTUgNSAxMCAwIHE1IDUgMTAgMCBxNSA1IDEwIDAgTTExMCAxODIgcTUgNSAxMCAwIHE1IDUgMTAgMCIgc3Ryb2tlPSIjYjRlYzZjIiBzdHJva2Utd2lkdGg9IjMiIGZpbGw9Im5vbmUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgogIDxwYXRoIGQ9Ik0xMTAgMzIgQzk4IDE2IDEwMiAtMiAxMjIgMiBDMTE0IDggMTE0IDIwIDEyNiAyOCBaIiBmaWxsPSIjZDFmZjhmIi8+CiAgPHBhdGggZD0iTTEyNCAzMCBDMTI2IDEwIDE0NiAyIDE2MCAxMiBDMTQ2IDEyIDEzOCAyMCAxMzggMzQgWiIgZmlsbD0iIzBhNWU1OCIvPgogIDxwYXRoIGQ9Ik0xMDIgMzYgQzg0IDMwIDc4IDE0IDg2IDYgQzkwIDIwIDEwMCAyNiAxMTQgMzAgWiIgZmlsbD0iIzAwOWU0ZCIvPgogIDxjaXJjbGUgY3g9IjEyMCIgY3k9Ijg0IiByPSI2MCIgZmlsbD0iIzAwYjg1YSIvPgogIDxwYXRoIGQ9Ik03OCA1MiBDODggMzggMTA0IDMwIDEyMCAzMCIgc3Ryb2tlPSIjZmZmZmZmIiBzdHJva2Utb3BhY2l0eT0iMC4zNSIgc3Ryb2tlLXdpZHRoPSI3IiBmaWxsPSJub25lIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KICA8cGF0aCBkPSJNNjIgOTYgQzY2IDEyNiA5MCAxNDQgMTIwIDE0NCBDMTUwIDE0NCAxNzQgMTI2IDE3OCA5NiBDMTcwIDEyMCAxNDggMTM0IDEyMCAxMzQgQzkyIDEzNCA3MCAxMjAgNjIgOTYgWiIgZmlsbD0iIzAwOWU0ZCIvPgogIDxwYXRoIGQ9Ik0xMjAgNjYgQzEyNiA1NiAxMzggNTIgMTQ4IDU0IEMxNjYgNTggMTc0IDc0IDE3MCA5MCBDMTY2IDEwOCAxNDggMTE0IDEzNiAxMDggQzEzMCAxMDUgMTI0IDEwMCAxMjAgOTYgQzExNiAxMDAgMTEwIDEwNSAxMDQgMTA4IEM5MiAxMTQgNzQgMTA4IDcwIDkwIEM2NiA3NCA3NCA1OCA5MiA1NCBDMTAyIDUyIDExNCA1NiAxMjAgNjYgWiIgZmlsbD0iIzNkZGM4NCIvPgogIDxlbGxpcHNlIGN4PSI4MCIgY3k9IjEwOCIgcng9IjExIiByeT0iNyIgZmlsbD0iI2ZmOGZiOCIvPgogIDxlbGxpcHNlIGN4PSIxNjAiIGN5PSIxMDgiIHJ4PSIxMSIgcnk9IjciIGZpbGw9IiNmZjhmYjgiLz4KICA8Y2lyY2xlIGN4PSI5OCIgY3k9IjgyIiByPSIxNyIgZmlsbD0iI2ZmZmZmZiIvPgogIDxjaXJjbGUgY3g9IjE0MiIgY3k9IjgyIiByPSIxNyIgZmlsbD0iI2ZmZmZmZiIvPgogIDxnIGNsYXNzPSJsb3JpLWV5ZSI+CiAgICA8Y2lyY2xlIGN4PSIxMDEiIGN5PSI4NCIgcj0iMTAuNSIgZmlsbD0iIzFkMWQxYiIvPgogICAgPGNpcmNsZSBjeD0iMTA1IiBjeT0iNzkiIHI9IjQiIGZpbGw9IiNmZmZmZmYiLz4KICAgIDxjaXJjbGUgY3g9Ijk4IiBjeT0iODkiIHI9IjEuNiIgZmlsbD0iI2ZmZmZmZiIvPgogIDwvZz4KICA8ZyBjbGFzcz0ibG9yaS1leWUiPgogICAgPGNpcmNsZSBjeD0iMTQ1IiBjeT0iODQiIHI9IjEwLjUiIGZpbGw9IiMxZDFkMWIiLz4KICAgIDxjaXJjbGUgY3g9IjE0OSIgY3k9Ijc5IiByPSI0IiBmaWxsPSIjZmZmZmZmIi8+CiAgICA8Y2lyY2xlIGN4PSIxNDIiIGN5PSI4OSIgcj0iMS42IiBmaWxsPSIjZmZmZmZmIi8+CiAgPC9nPgogIDxwYXRoIGQ9Ik0xMjAgOTYgQzEzMiA5NiAxMzkgMTA0IDEzOCAxMTYgQzEzNyAxMjggMTMwIDEzOCAxMjEgMTQ4IEMxMTkgMTUwIDExNyAxNDkgMTE2IDE0NiBDMTA5IDEzNiAxMDMgMTI3IDEwMiAxMTYgQzEwMSAxMDQgMTA4IDk2IDEyMCA5NiBaIiBmaWxsPSIjZmZjODAwIi8+CiAgPHBhdGggZD0iTTExMSAxMDMgQzExNSAxMDAgMTIxIDk5IDEyNyAxMDEiIHN0cm9rZT0iI2ZmZTY4MCIgc3Ryb2tlLXdpZHRoPSIzIiBmaWxsPSJub25lIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KICA8cGF0aCBkPSJNMTEwIDEyNyBDMTE1IDEzMyAxMjUgMTMzIDEzMCAxMjcgQzEyNyAxMzUgMTI0IDE0MSAxMjAgMTQ1IEMxMTYgMTQxIDExMiAxMzUgMTEwIDEyNyBaIiBmaWxsPSIjZTg5YTAwIi8+CiAgPHBhdGggZD0iTTEwNCAyMDAgYy0yIDYgLTYgOSAtMTAgMTAgTTExMCAyMDIgYzAgNiAtMSA4IC0yIDEwIE0xMzYgMjAwIGMyIDYgNiA5IDEwIDEwIE0xMzAgMjAyIGMwIDYgMSA4IDIgMTAiIHN0cm9rZT0iI2ZmOWY0MyIgc3Ryb2tlLXdpZHRoPSI1IiBmaWxsPSJub25lIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KICA8cmVjdCB4PSI2MiIgeT0iMjA4IiB3aWR0aD0iMTE2IiBoZWlnaHQ9IjEwIiByeD0iNSIgZmlsbD0iIzFkMWQxYiIvPgo8L3N2Zz4K" x="1035" y="26" width="162" height="162" opacity="0.96" preserveAspectRatio="xMidYMid meet"/>
+  <rect width="1280" height="320" rx="20" fill="url(#glow)"/>
+
+  <text x="80" y="150" font-family="Cal Sans" font-size="76" font-weight="800" fill="#ffffff" letter-spacing="-1">Translatorio Python SDK</text>
+  <rect x="84" y="172" width="64" height="6" rx="3" fill="#d1ff8f"/>
+  <text x="80" y="222" font-family="Cal Sans" font-size="28" font-weight="400" fill="#d1ff8f" fill-opacity="0.75">The official Python client for the Translatorio translation API</text>
+
+  <g transform="translate(80 254)">
+    <path transform="scale(1.08)" fill="#d1ff8f" fill-opacity="0.8" d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222 0 1.606-.014 2.898-.014 3.293 0 .322.216.694.825.576C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+    <text x="38" y="20" font-family="Cal Sans" font-size="22" font-weight="600" fill="#d1ff8f" fill-opacity="0.8">translatorio <tspan fill-opacity="0.45">/</tspan> <tspan fill="#d1ff8f" fill-opacity="1">python-sdk</tspan></text>
+  </g>
+  <text x="1200" y="278" text-anchor="end" font-family="Cal Sans" font-size="22" font-weight="600" fill="#d1ff8f" letter-spacing="0.5">translatorio.com</text>
+</svg>

@@ -1,4 +1,3 @@
-<!-- The banner is still to be generated: art/banner.png does not exist yet in this repository. -->
 ![Translatorio Python SDK](https://raw.githubusercontent.com/translatorio/python-sdk/main/art/banner.png)
 
 # Translatorio Python SDK
