@@ -2,6 +2,8 @@
 
 # Translatorio Python SDK
 
+[![PyPI version](https://img.shields.io/pypi/v/translatorio-sdk.svg)](https://pypi.org/project/translatorio-sdk/) [![PyPI downloads](https://img.shields.io/pypi/dm/translatorio-sdk.svg)](https://pypi.org/project/translatorio-sdk/) [![license](https://img.shields.io/pypi/l/translatorio-sdk.svg)](https://github.com/translatorio/python-sdk/blob/main/LICENSE) [![Python versions](https://img.shields.io/pypi/pyversions/translatorio-sdk.svg)](https://pypi.org/project/translatorio-sdk/)
+
 The official Python client for [Translatorio](https://translatorio.com), the translation API.
 
 ```bash
@@ -316,7 +318,8 @@ The client's own suite runs over a stub transport: `python3 -m unittest discover
 
 ## Author
 
-Created by [Edu Lazaro](https://edulazaro.com) for [Translatorio](https://translatorio.com).
+Created by [Edu Lazaro](https://edulazaro.com) for [Translatorio](https://translatorio.com),
+the translation API this client speaks to.
 
 ## License
 
