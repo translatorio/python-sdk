@@ -109,7 +109,7 @@ tr.translate_file(catalogue_text, "fr", filename="messages.po")
 ```
 
 A path or bytes are uploaded as `multipart/form-data`, exactly as they are, so a UTF-16
-`.strings` file arrives byte for byte. Text goes up as JSON. A plain `str` is always the
+`.strings` file arrives byte for byte (it comes back translated as UTF-8). Text goes up as JSON. A plain `str` is always the
 content, never a path: pass a `pathlib.Path` to read a file.
 
 ## Translating an image
@@ -271,7 +271,7 @@ timed out and is asked again is translated once and billed once. Pass your own w
 A redirect (never followed, so your key goes nowhere it was not sent), an empty body or a
 proxy's HTML page is a retryable `ServerError`.
 
-`timeout=` (10 seconds by default) applies to connecting and to every read, so a stalled
+`timeout=` (120 seconds by default) applies to connecting and to every read, so a stalled
 body fails like a stalled connection.
 
 ## Webhooks

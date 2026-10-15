@@ -80,7 +80,7 @@ class UrllibTransport:
     the first time the host disagrees.
     """
 
-    def __init__(self, timeout: float = 10.0) -> None:
+    def __init__(self, timeout: float = 120.0) -> None:
         """Build a transport whose socket operations give up after ``timeout`` seconds.
 
         Connecting and every read each have the full ``timeout``, which is what urllib's
@@ -277,7 +277,7 @@ class Client:
         api_key: str,
         base_url: str = "https://translatorio.com/api",
         retries: int = 2,
-        timeout: float = 10.0,
+        timeout: float = 120.0,
         transport: Transport | None = None,
         sleep: Callable[[float], None] = time.sleep,
         max_wait: float = 30.0,
