@@ -2,7 +2,13 @@
 
 # Translatorio Python SDK
 
-[![tests](https://github.com/translatorio/python-sdk/actions/workflows/tests.yml/badge.svg)](https://github.com/translatorio/python-sdk/actions/workflows/tests.yml) [![PyPI version](https://img.shields.io/pypi/v/translatorio-sdk.svg)](https://pypi.org/project/translatorio-sdk/) [![PyPI downloads](https://img.shields.io/pypi/dm/translatorio-sdk.svg)](https://pypi.org/project/translatorio-sdk/) [![license](https://img.shields.io/pypi/l/translatorio-sdk.svg)](https://github.com/translatorio/python-sdk/blob/main/LICENSE) [![Python versions](https://img.shields.io/pypi/pyversions/translatorio-sdk.svg)](https://pypi.org/project/translatorio-sdk/)
+<p align="center">
+    <a href="https://github.com/translatorio/python-sdk/actions/workflows/tests.yml"><img src="https://github.com/translatorio/python-sdk/actions/workflows/tests.yml/badge.svg" alt="tests"></a>
+    <a href="https://pypi.org/project/translatorio-sdk/"><img src="https://img.shields.io/pypi/v/translatorio-sdk.svg" alt="PyPI version"></a>
+    <a href="https://pypi.org/project/translatorio-sdk/"><img src="https://img.shields.io/pypi/dm/translatorio-sdk.svg" alt="PyPI downloads"></a>
+    <a href="https://github.com/translatorio/python-sdk/blob/main/LICENSE"><img src="https://img.shields.io/pypi/l/translatorio-sdk.svg" alt="license"></a>
+    <a href="https://pypi.org/project/translatorio-sdk/"><img src="https://img.shields.io/pypi/pyversions/translatorio-sdk.svg" alt="Python versions"></a>
+</p>
 
 The official Python client for [Translatorio](https://translatorio.com), the translation API.
 
