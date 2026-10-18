@@ -100,7 +100,7 @@ USAGE = {
         "cached": 0,
         "corrected": 0,
         "anonymized": 2,
-        "model": {"read": True, "name": "gpt-5.6-luna", "why": None, "effort": "medium"},
+        "model": {"read": True, "why": None, "effort": "medium"},
         "tokens": {"input": 420, "output": 30},
     },
     "credits": {"charged": 3, "remaining": 1997},
@@ -155,7 +155,6 @@ class TranslateTest(unittest.TestCase):
         self.assertEqual(2, result.anonymized)
         self.assertEqual(11, result.characters)
         self.assertTrue(result.model_read)
-        self.assertEqual("gpt-5.6-luna", result.model_name)
         self.assertEqual("medium", result.effort)
         self.assertEqual({"input": 420, "output": 30}, result.tokens)
         self.assertFalse(result.test)
@@ -254,7 +253,7 @@ class FileTest(unittest.TestCase):
             {"language": "de", "name": "de.json", "content": '{"home": "Startseite"}', "intact": True},
         ],
         "intact": True,
-        "usage": {"characters": 8, "segments": 4, "cached": 1, "anonymized": 0, "model": {"read": True, "name": "gpt-5.6-luna", "why": None}, "tokens": {"input": 1, "output": 1}},
+        "usage": {"characters": 8, "segments": 4, "cached": 1, "anonymized": 0, "model": {"read": True, "why": None}, "tokens": {"input": 1, "output": 1}},
         "credits": {"charged": 5, "remaining": 100},
         "mode": "live",
         "took_ms": 900,
@@ -278,7 +277,7 @@ class FileTest(unittest.TestCase):
         self.assertEqual("https://example.test/api/v1/translate/file", transport.calls[0]["url"])
 
     def test_the_answer_says_corrections_and_effort(self):
-        answer = {**self.ANSWER, "usage": {**self.ANSWER["usage"], "corrected": 2, "model": {"read": True, "name": "gpt-5.6-luna", "why": None, "effort": "high"}}}
+        answer = {**self.ANSWER, "usage": {**self.ANSWER["usage"], "corrected": 2, "model": {"read": True, "why": None, "effort": "high"}}}
         tr, _ = client([(200, answer)])
 
         result = tr.translate_file('{"home": "Home"}', "es", filename="en.json")
@@ -362,7 +361,7 @@ class ImageTest(unittest.TestCase):
         "source": {"language": "ja"},
         "targets": ["en"],
         "blocks": [{"text": "出口", "box": {"x": 0.12, "y": 0.08, "width": 0.3, "height": 0.1}, "translations": {"en": "Exit"}}],
-        "usage": {"characters": 2, "blocks": 1, "model": {"read": True, "name": "gpt-5.6-luna", "why": None, "effort": "high"}, "tokens": {"input": 1, "output": 1}},
+        "usage": {"characters": 2, "blocks": 1, "model": {"read": True, "why": None, "effort": "high"}, "tokens": {"input": 1, "output": 1}},
         "credits": {"charged": 13, "remaining": 100},
         "mode": "live",
         "took_ms": 2000,
@@ -605,7 +604,7 @@ class AccountTest(unittest.TestCase):
     RECORD = {
         "id": "tr_01k6", "reference": "release-42", "kind": "text", "channel": "api",
         "source": "en", "targets": ["es", "de"], "format": "html", "characters": 1840,
-        "segments": 24, "cached": 20, "anonymized": 0, "model": "gpt-5.6-luna",
+        "segments": 24, "cached": 20, "anonymized": 0,
         "credits": 9, "took_ms": 1290, "created_at": "2026-10-03T09:12:44+00:00",
     }
 
@@ -622,7 +621,6 @@ class AccountTest(unittest.TestCase):
         self.assertEqual(["es", "de"], page.items[0].targets)
         self.assertEqual(9, record.credits)
         self.assertEqual(20, record.cached)
-        self.assertEqual("gpt-5.6-luna", record.model)
         self.assertTrue(transport.calls[0]["url"].endswith("/v1/translations?kind=text&reference=release-42&cursor=abc"))
         self.assertTrue(transport.calls[1]["url"].endswith("/v1/translations/tr_01k6"))
 

@@ -65,18 +65,13 @@ class _Charged(_Record):
 
     @property
     def model(self) -> dict[str, Any]:
-        """The model block as sent: ``{"read": ..., "name": ..., "why": ...}``."""
+        """The model block as sent: ``{"read": ..., "effort": ..., "why": ...}``."""
         return _dict(self.usage.get("model"))
 
     @property
     def model_read(self) -> bool:
         """Whether a model read anything for this call."""
         return self.model.get("read") is True
-
-    @property
-    def model_name(self) -> str | None:
-        """Which model served it, when one did."""
-        return _str(self.model.get("name"))
 
     @property
     def model_why(self) -> str | None:
@@ -569,11 +564,6 @@ class TranslationRecord(_Record):
     def anonymized(self) -> int:
         """Pieces of personal data masked."""
         return _int(self.raw.get("anonymized"))
-
-    @property
-    def model(self) -> str | None:
-        """The model that served it, when one did."""
-        return _str(self.raw.get("model"))
 
     @property
     def credits(self) -> int:
